@@ -5,5 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_animation_set">AnimationSetActivity</string>
+    <string name="title_activity_other">OtherActivity</string>
+    <string name="title_activity_drawable">DrawableActivity</string>
+    <string name="title_activity_surface">SurfaceActivity</string>
+    <string name="title_activity_blue_tooth">BlueToothActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
 
 </resources>

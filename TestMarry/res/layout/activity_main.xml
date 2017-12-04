@@ -15,7 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="btn_nextActivity" />
-
+<Button
+        android:id="@+id/btn_Animationset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_Animationset" />
+<Button
+        android:id="@+id/btn_otherActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_otherActivity" />
     <Button
         android:id="@+id/buttonSysUI"
         android:layout_width="match_parent"

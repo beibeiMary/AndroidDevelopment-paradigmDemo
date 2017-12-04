@@ -15,7 +15,7 @@ import android.widget.Button;
 
 @SuppressLint("NewApi")
 public class MainActivity extends Activity implements OnClickListener {
-	private Button btnSysUI, toggleButton, btn_nextActivity;
+	private Button btnSysUI, toggleButton, btn_nextActivity,btn_Animationset,btn_otherActivity;
 	private View viewToAnimate;
 
 	@Override
@@ -25,6 +25,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnSysUI = (Button) findViewById(R.id.buttonSysUI);
 		toggleButton = (Button) findViewById(R.id.toggleButton);
 		btn_nextActivity = (Button) findViewById(R.id.btn_nextActivity);
+		btn_Animationset = (Button) findViewById(R.id.btn_Animationset);
+		btn_otherActivity = (Button) findViewById(R.id.btn_otherActivity);
 		viewToAnimate = findViewById(R.id.theView);
 		btnSysUI.setOnClickListener(new OnClickListener() {
 			@Override
@@ -41,6 +43,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 		toggleButton.setOnClickListener(this);
 		btn_nextActivity.setOnClickListener(this);
+		btn_otherActivity.setOnClickListener(this);
 	}
 
 	@Override
@@ -49,6 +52,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.btn_nextActivity:
 			Intent intent = new Intent(this,AnimationActivity.class);
 			startActivity(intent);
+			break;
+		case R.id.btn_Animationset:
+			Intent intent2 = new Intent(this,AnimationSetActivity.class);
+			startActivity(intent2);
+			break;
+		case R.id.btn_otherActivity:
+			Intent intent3 = new Intent(this,OtherActivity.class);
+			startActivity(intent3);
 			break;
 		case R.id.toggleButton:
 			if (viewToAnimate.getVisibility() == View.VISIBLE) {
@@ -62,6 +73,15 @@ public class MainActivity extends Activity implements OnClickListener {
 				viewToAnimate.startAnimation(in);
 				viewToAnimate.setVisibility(View.VISIBLE);
 			}
+			/*if(viewToAnimate.getAlpha() > 0f) {
+				//如果视图已经可见，则将其从右侧滑出
+				viewToAnimate.animate().alpha(0f).translationX(1000f);
+				} else {
+				//如果视图是隐藏的，原地做一个渐显动画
+				//Property Animation 会实际修改视图，因此必须首先恢复视图的位置
+				viewToAnimate.setTranslationX(0f);
+				viewToAnimate.animate().alpha(1f);
+				}*/
 			break;
 		default:
 			break;
